@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wave Cafe</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-blue-100 via-white to-blue-200 font-sans">
 
   <!-- Header -->
-  <header class="bg-white shadow-md">
+  <header class="bg-white shadow-md fixed w-full top-0 left-0 z-10">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-3xl font-bold text-blue-600">Wave Cafe</h1>
-      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+      <button id="contactBtn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
         Contact Us
       </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-10 px-4">
-    <img src="anastasia-zhenina-PMnJWQ1F_ww-unsplash.jpg"
-         alt="Cafe" class="mx-auto rounded-xl shadow-lg w-full max-w-3xl mb-6">
-    <h2 class="text-4xl font-bold text-gray-800 mb-4">Selamat datang di Wave Cafe</h2>
-    <p class="text-lg text-gray-600 max-w-xl mx-auto mb-6">
-      Tempat ngopi paling nyaman di pinggir pantai. Nikmati kopi hangat dan suasana ombak yang menenangkan.
-    </p>
-    <button class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
-      Lihat Menu
-    </button>
-  </section>
+  <main class="pt-24">
 
-  <!-- Features -->
-  <section class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 py-10">
-    <div class="bg-white rounded-2xl shadow p-6 text-center">
-      <h3 class="text-xl font-semibold mb-2">Kopi Spesial</h3>
-      <p class="text-gray-600">Dibuat dari biji pilihan langsung dari petani lokal Indonesia.</p>
-    </div>
-    <div class="bg-white rounded-2xl shadow p-6 text-center">
-      <h3 class="text-xl font-semibold mb-2">Live Music</h3>
-      <p class="text-gray-600">Hibur diri dengan alunan musik akustik setiap malam Jumat.</p>
-    </div>
-    <div class="bg-white rounded-2xl shadow p-6 text-center">
-      <h3 class="text-xl font-semibold mb-2">Wi-Fi Gratis</h3>
-      <p class="text-gray-600">Koneksi cepat dan stabil untuk kamu yang butuh suasana kerja santai.</p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="text-center py-10 px-4">
+      <img src="anastasia-zhenina-PMnJWQ1F_ww-unsplash.jpg"
+           alt="Cafe" class="mx-auto rounded-xl shadow-lg w-full max-w-3xl mb-6" />
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Selamat datang di Wave Cafe</h2>
+      <p class="text-lg text-gray-600 max-w-xl mx-auto mb-6">
+        Tempat ngopi paling nyaman di pinggir pantai. Nikmati kopi hangat dan suasana ombak yang menenangkan.
+      </p>
+      <button id="menuBtn" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+        Lihat Menu
+      </button>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center py-6 mt-10">
-    <p>&copy; 2025 Wave Cafe. All rights reserved.</p>
+    <!-- Features -->
+    <section class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 py-10">
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Kopi Spesial</h3>
+        <p class="text-gray-600">Dibuat dari biji pilihan langsung dari petani lokal Indonesia.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Live Music</h3>
+        <p class="text-gray-600">Hibur diri dengan alunan musik akustik setiap malam Jumat.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6 text-center">
+        <h3 class="text-xl font-semibold mb-2">Wi-Fi Gratis</h3>
+        <p class="text-gray-600">Koneksi cepat dan stabil untuk kamu yang butuh suasana kerja santai.</p>
+      </div>
+    </section>
+
+    <!-- Menu Section (hidden by default) -->
+    <section id="menuSection" class="max-w-4xl mx-auto px-4 py-10 bg-white rounded-2xl shadow-lg mb-10 hidden">
+      <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">Menu Minuman</h2>
+      <ul class="space-y-4 text-gray-700 text-lg">
+        <li><strong>Iced Coffee</strong> - Es kopi segar dengan susu pilihan</li>
+        <li><strong>Hot Coffee</strong> - Kopi panas nikmat yang menghangatkan</li>
+        <li><strong>Fruit Juice</strong> - Jus buah segar sesuai musim</li>
+        <li><strong>Special Blend</strong> - Campuran kopi spesial racikan barista kami</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contactSection" class="bg-blue-600 text-white text-center py-10">
+    <h2 class="text-2xl font-bold mb-4">Hubungi Kami</h2>
+    <p class="mb-1">Alamat: Jl. Pantai Indah No.123, Bali, Indonesia</p>
+    <p class="mb-1">Telepon: +62 812 3456 7890</p>
+    <p>Email: <a href="mailto:info@wavecafe.com" class="underline">info@wavecafe.com</a></p>
+    <p class="mt-6">&copy; 2025 Wave Cafe. All rights reserved.</p>
   </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const contactBtn = document.getElementById('contactBtn');
+    const menuSection = document.getElementById('menuSection');
+    const contactSection = document.getElementById('contactSection');
+
+    menuBtn.addEventListener('click', () => {
+      if (menuSection.classList.contains('hidden')) {
+        menuSection.classList.remove('hidden');
+        menuSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        menuSection.classList.add('hidden');
+      }
+    });
+
+    contactBtn.addEventListener('click', () => {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>
